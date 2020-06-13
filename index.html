@@ -1,0 +1,696 @@
+<!-- تطبيق موقع كامل على ال html و css فقط 
+تم شرح فى الفيديو : 
+
+- كيفيه تنسيق الفايلات وتنظيمها بالطريقة الصحيحه 
+
+- تحميل الصور والمكتبات والخطوط المطلوبة للتصميم 
+
+- شرح لماذا استخدمنا هذه الخاصيه بدل هذه الخاصية 
+
+- تكويد ال header بطريقة بسيطة وشرح بعض الملاحظات  
+ -->
+ <!-- فيديو10 -->
+
+ <html>
+    <head>
+       
+        <meta charset="utf-8">
+       <meta name="keywords" content=""/>
+       <meta name="description" content=""/>
+       <title> html css Template 1</title>
+       <!-- font -->
+       <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+       <!-- font -->
+       <!-- css files -->
+       <link rel="stylesheet" href="cssstyle/font-awesome.min.css"/>
+       <link rel="stylesheet" href="cssstyle/css.css"/>
+        <!-- css files -->
+    </head>
+    <body>
+        <!-- header -->
+  <div class="header">
+    <div class="container">
+      <div class="header-content">
+          <!-- General حاجه بتكرر كتير على الويب سايت اى حاجه containerعشان containerبدلheader-content عملنا  -->
+            <div class="logo">
+            <img src="images/images/logo-alt.webp" alt="logo image" draggable="false">
+            <!-- draggable="false" -->  <!--draggable معناه اننا نمنع ان الصور تتاخد -->
+
+            </div>
+            <ul class="nav"> 
+            <li><a href="#" class="active">Home</a></li>
+            <li> <a href="#">About</a></li>
+            <li> <a href="#">Portfolio</a></li>
+            <li><a href="#">Services</a></li>
+            <li> <a href="#">Prices</a></li>
+            <li> <a href="#">Team</a></li>
+            <li class="dropdown">
+                <a href="#">Blog</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">blog bost</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="clear"></div>
+      </div> <!--./header-content-->
+        <!--  -->
+        <!-- <div class="clear"> </div> -->
+        <!--float لازم تحطها بعد اخر عنصر واخد  -->
+    </div><!--./ container -->
+   </div>  <!--./ header -->
+   <!--#/هيكونid  لو  -->
+
+
+    <!-- فيديو11 -->
+        <!-- تصميم جزئية ال header و جزئية ال home section 
+            واضافه بعض التفاصيل المهمه اثناء التطبيق 
+            -->
+            <!--  -->
+
+                <!-- Home Section -->
+                <div class="home">
+                    <div class="overlay">
+
+                    <div class="home-content">
+                        <h1 class="title">we are creative agency</h1>
+                        <p class="home-desc">Morbi mattis felis at nunc. Duis viverra diam non justo. In nisl. Nullam sit amet magna in magna gravida vehicula. Mauris tincidunt sem sed arcu. Nunc posuere.
+
+                        </p>
+                        <button class=" btn btn-start hover-opacity" >Get started!</button>
+                        <button class=" btn btn-learn hover-opacity"> learn more!</button>
+                    </div> <!--./home-content-->
+                </div><!--./overlay-->
+                </div><!-- home-->
+
+                <!-- فيديو12 -->
+                <!-- تصميم جزئية ال about و جزئية ال Portfolio
+                واضافه بعض التفاصيل المهمه اثناء التطبيق  -->
+                <!-- section-header -->
+                <!-- <div class="section-header">
+                    <h2 class="section-title">welcome to website</h2>
+                    <span class="line"></span>
+                </div> -->
+                
+                <!-- About Section -->
+                    <div class="about pd-y">
+                    <div class="section-header">
+                        <h2 class="section-title">welcome to website</h2>
+                        <span class="line"></span>
+                    </div> <!--./ section-header -->
+                    <div class="container">
+                        <div class="about-content"> 
+                            <div class="about-item ltr-effect">
+                                <i class=" icon fa fa-cogs fa-2x"></i>
+                                <h2 class="about-item-title">Fully Customizible </h2>
+                                <p class="about-item-desc">
+                                    Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.
+                                </p>
+                                <a href="#" class="about-title-link">read more</a>
+
+                            </div> <!-- ./about-item -->
+                            <div class="about-item mg ltr-effect">
+                                <i class=" icon fa fa-magic fa-2x"></i>
+                                <h2 class="about-item-title">Fully Customizible </h2>
+                                <p class="about-item-desc">
+                                    Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.
+                                </p>
+                                <a href="#" class="about-title-link">read more</a>
+
+                            </div> <!-- ./about-item -->
+                            <div class="about-item ltr-effect">
+                                <i class=" icon fa fa-mobile fa-2x"></i>
+                                <h2 class="about-item-title">Fully Customizible </h2>
+                                <p class="about-item-desc">
+                                    Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.
+                                </p>
+                                <a href="#" class="about-title-link">read more</a>
+
+                            </div> <!-- ./about-item -->
+                        </div>  <!--./about-content  -->
+                    </div> <!--./container  -->
+                </div><!--./about-->
+                       <!--portfolio section  -->
+                       <div class="portfolio pd-y">
+                        <div class="section-header">
+                            <h2 class="section-title">featured works</h2>
+                            <span class="line"></span>
+                        </div> 
+                        <div class="container">
+                    <div class="portfolio-content"> 
+                        <div class="porfolio-item">
+                            <img src="images/images/work/work1.webp" alt="image">
+                            <div class="layer-content">
+                               <div class="layer-info">
+                                <span class="category">category</span>
+                                <h3 class="layer-content-title">lorem ipsum dolor</h3>
+                                <a href="#"><i class="fa fa-external-link fa-x"></i></a>
+                                <a href="#"><i class="fa fa-search fa-x" ></i></a>
+                               </div>
+                                <!--  معناه مقاسهم لرجlg -->
+                                <!-- fa-xوهو lg ده مقاس برضو غير  -->
+
+                            </div>
+
+                       </div><!--./portfolio-item  --> 
+                        <div class="porfolio-item mg">
+                            <img src="images/images/work/work2.webp" alt="image">
+                            <div class="layer-content">
+                                <div class="layer-info">
+                                 <span class="category">category</span>
+                                 <h3 class="layer-content-title">lorem ipsum dolor</h3>
+                                 <a href="#"><i class="fa fa-external-link fa-x"></i></a>
+                                 <a href="#"><i class="fa fa-search fa-x" ></i></a>
+                                </div>
+                                 <!--  معناه مقاسهم لرجlg -->
+                                 <!-- fa-xوهو lg ده مقاس برضو غير  -->
+ 
+                             </div>
+
+                    </div><!--./portfolio-item  -->
+                        <div class="porfolio-item">
+                            <img src="images/images/work/work3.webp" alt="image">
+                            <div class="layer-content">
+                                <div class="layer-info">
+                                 <span class="category">category</span>
+                                 <h3 class="layer-content-title">lorem ipsum dolor</h3>
+                                 <a href="#"><i class="fa fa-external-link fa-x"></i></a>
+                                 <a href="#"><i class="fa fa-search fa-x" ></i></a>
+                                </div>
+                                 <!--  معناه مقاسهم لرجlg -->
+                                 <!-- fa-xوهو lg ده مقاس برضو غير  -->
+ 
+                             </div>
+
+                    </div><!--./portfolio-item  -->
+                    <div class="porfolio-item">
+                        <img src="images/images/work/work4.webp" alt="image">
+                        <div class="layer-content">
+                            <div class="layer-info">
+                             <span class="category">category</span>
+                             <h3 class="layer-content-title">lorem ipsum dolor</h3>
+                             <a href="#"><i class="fa fa-external-link fa-x"></i></a>
+                             <a href="#"><i class="fa fa-search fa-x" ></i></a>
+                            </div>
+                             <!--  معناه مقاسهم لرجlg -->
+                             <!-- fa-xوهو lg ده مقاس برضو غير  -->
+
+                         </div>
+
+                    </div><!--./portfolio-item  -->
+                    <div class="porfolio-item mg">
+                        <img src="images/images/work/work5.webp" alt="image">
+                        <div class="layer-content">
+                            <div class="layer-info">
+                             <span class="category">category</span>
+                             <h3 class="layer-content-title">lorem ipsum dolor</h3>
+                             <a href="#"><i class="fa fa-external-link fa-x"></i></a>
+                             <a href="#"><i class="fa fa-search fa-x" ></i></a>
+                            </div>
+                             <!--  معناه مقاسهم لرجlg -->
+                             <!-- fa-xوهو lg ده مقاس برضو غير  -->
+
+                         </div>
+
+                    </div><!--./portfolio-item  -->
+                    <div class="porfolio-item">
+                        <img src="images/images/work/work6.webp" alt="image">
+                        <div class="layer-content">
+                            <div class="layer-info">
+                             <span class="category">category</span>
+                             <h3 class="layer-content-title">lorem ipsum dolor</h3>
+                             <a href="#"><i class="fa fa-external-link fa-x"></i></a>
+                             <a href="#"><i class="fa fa-search fa-x" ></i></a>
+                            </div>
+                             <!--  معناه مقاسهم لرجlg -->
+                             <!-- fa-xوهو lg ده مقاس برضو غير  -->
+
+                         </div>
+                         
+
+                        </div><!--./portfolio-item  -->
+                        </div>  <!--./portfolio-content  -->
+                        </div>
+                       </div>
+                      
+
+
+                        <!-- video 13 -->
+                        <!-- - تصميم جزئيه ال Offer 
+                        - تصميم حزئية ال Service  -->
+                        
+                          <!-- offer-section -->
+                         <div class="offer pd-y">
+       
+        <div class="container">
+            <div class="offer-content"> 
+                <div class="offer-item ltr-effect">
+                    <i class="icon fa fa-diamond fa-2x"></i>
+                    <h2 class="offer-item-title">featured works </h2>
+                    <p class="offer-item-desc">
+                        Maecenas tempus tellus eget condimentum rhoncus sem quam semper libero sit amet.
+                    </p>
+                </div> <!-- ./offer-item -->
+                <div class="offer-item ltr-effect mg">
+                    <i class="icon fa fa-rocket  fa-2x"></i>
+                    <h2 class="offer-item-title">featured works </h2>
+                    <p class="offer-item-desc">
+                        maecenas tempus tellus eget condimentum rhoncus sem quam semper libero.
+                    </p>
+                </div> <!-- ./offer-item -->
+                <div class="offer-item ltr-effect">
+                    <i class="icon fa fa-cogs fa-2x"></i>
+                    <h2 class="offer-item-title">featured works </h2>
+                    <p class="offer-item-desc">
+                        maecenas tempus tellus eget condimentum rhoncus sem quam semper libero.
+                    </p>
+                </div> <!-- ./offer-item -->
+                <div class="offer-item ltr-effect">
+                    <i class="icon fa fa-diamond fa-2x"></i>
+                    <h2 class="offer-item-title">featured works </h2>
+                    <p class="offer-item-desc">
+                        maecenas tempus tellus eget condimentum rhoncus sem quam semper libero.
+                    </p>
+                </div> <!-- ./offer-item -->
+                <div class="offer-item ltr-effect mg">
+                    <i class="icon fa fa-pencil mg fa-2x"></i>
+                    <h2 class="offer-item-title">featured works </h2>
+                    <p class="offer-item-desc">
+                        maecenas tempus tellus eget condimentum rhoncus sem quam semper libero.
+                    </p>
+                </div> <!-- ./offer-item -->
+                <div class="offer-item ltr-effect">
+                    <i class="icon fa fa-flask fa-2x"></i>
+                    <h2 class="offer-item-title">featured works </h2>
+                    <p class="offer-item-desc">
+                        maecenas tempus tellus eget condimentum rhoncus sem quam semper libero.
+                    </p>
+                </div> <!-- ./offer-item -->
+               
+                    
+         
+            </div>  <!--./offer-content  -->
+        </div> <!--./container  -->
+                          </div><!--./offer-->
+                          <!-- service section -->
+                          <div class="service pd-y">
+                           
+                              <div class="container">
+                                  
+
+                              <div class="service-item">
+                                <div class="section-header">
+                                    <h2 class="section-title">why choose us</h2>
+                                    <span class="line"></span>
+                                </div> <!--./ section-header -->
+                                  <p class="service-item-desc">
+                                    Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris. Ultrices sagittis orci a scelerisque purus.
+                                  </p>
+                                  <ul class="service-list">
+                                      <li> <i class="fa fa-check fa-fw"></i>Quis varius quam quisque id diam vel quam elementum.</li>
+                                      <li> <i class="fa fa-check fa-fw"></i>Mauris augue neque gravida in fermentum.</li>
+                                      <li> <i class="fa fa-check fa-fw"></i>Orci phasellus egestas tellus rutrum.</li>
+                                      <li><i class="fa fa-check  fa-fw"></i>Nec feugiat nisl pretium fusce id velit ut tortor pretium.</li>
+                                  </ul> <!--./service-list-->
+                              </div>     <!-- ./service-item-->
+                              <div class="service-item">
+                                  <div>
+                                      <img src="images/images/about/about1.webp" alt="images">
+                                  </div>
+                               <ul class="service-bollest">
+                                   <li class="active"></li>
+                                   <li class=""></li>
+                                   <li class=""></li>
+                                   <li class=""></li>
+                               </ul>  
+                            </div> <!-- ./service-item-->
+                            <div class="clear"></div>
+
+                            </div> <!--./container-->
+                          </div> <!-- ./service -->
+                          <!-- numbers section -->
+                          <div class="numbers" >
+                        <div class="overlay">
+                            <div class="container">
+                                <div class="numbers-items">
+                                    <div class="number-item">
+                                        <i class=" icon fa fa-users fa-2x"></i>
+                                        <h3 class="number-item-title">451</h3>
+                                        <span class="number-item-text">happy clients</span>
+                                    </div>
+                                    <div class="number-item">
+                                        <i class=" icon fa fa-trophy fa-2x"></i>
+                                        <h3 class="number-item-title">12</h3>
+                                        <span class="number-item-text">awards won</span>
+
+                                    </div>
+                                    <div class="number-item">
+                                        <i class=" icon fa fa-coffee fa-2x"></i>
+                                        <h3 class="number-item-title">154K</h3>
+                                        <span class="number-item-text">cups of coffee</span>
+                                    </div>
+                                    <div class="number-item">
+                                        <i class=" icon fa fa-file fa-2x"></i>
+                                        <h3 class="number-item-title">45</h3>
+                                        <span class="number-item-text">projects completed</span>
+                                    </div>
+                                </div><!--./numbers-items  -->
+                            </div><!--./container  -->
+                        </div><!--./overlay  -->
+                    </div><!--./numbers  -->
+                    <!-- price section -->
+                    <div class="price pd-y">
+                        <div class="section-header">
+                            <h2 class="section-title">pricing table</h2>
+                            <span class="line"></span>
+                        </div> <!--./ section-header -->
+                        <div class="container">
+                            <div class="pricing-plans ">
+                                <div class="pricing-item ttp-effect">
+                                    <span class="pricing-item-text">bASIC PLAN</span>
+                                    <div class="pricing-item-permonth">
+                                        <h3 class="doller">$9</h3>
+                                        <span class="month">/ mONTH</span>
+                                    </div>
+                                    <ul class="pricing-list">
+                                        <li>1GB Disk Space</li>
+                                        <li>100 Email Account</li>
+                                        <li>24/24 Support</li>
+                                    </ul>
+                                    <button class="pricing-item-purchase"> purchase now</button>
+                                </div> <!--./pricing-item-->
+                                <div class="pricing-item mg ttp-effect">
+                                    <span class="pricing-item-text">bASIC pLAN</span>
+                                    <div class="pricing-item-permonth">
+                                        <h3 class="doller">$19</h3>
+                                        <span class="month">/ mONTH</span>
+                                    </div>
+                                    <ul class="pricing-list">
+                                        <li>1GB Disk Space</li>
+                                        <li>100 Email Account</li>
+                                        <li>24/24 Support</li>
+                                    </ul>
+                                    <button class="pricing-item-purchase"> purchase now</button>
+                                </div> <!--./pricing-item-->
+                                <div class="pricing-item ttp-effect">
+                                    <span class="pricing-item-text">bASIC PLAN</span>
+                                    <div class="pricing-item-permonth">
+                                        <h3 class="doller">$39</h3>
+                                        <span class="month">/ mONTH</span>
+                                    </div>
+                                    <ul class="pricing-list">
+                                        <li>1GB Disk Space</li>
+                                        <li>100 Email Account</li>
+                                        <li>24/24 Support</li>
+                                    </ul>
+                                    <button class="pricing-item-purchase"> purchase now</button>
+                                </div> <!--./pricing-item-->
+                            </div>  <!--./pricing-plans  -->
+                        </div>  <!--./container  -->
+                    </div>  <!-- ./price -->
+
+                    <!-- testimonail section -->
+                    <div class="testimonail">
+                        <div class="overlay">
+                            <div class="container">
+                                <div class="testimonail-content">
+                                    <div class="testimonail-item">
+                                        <div class="testimonail-toplayer">
+                                            <img src="images/images/Testimonial/perso1.webp" alt="image" >
+                                            <h3>jon doe</h3>
+                                            <span>web designer</span>
+                                        </div><!--./testimonail-toplayer-->
+                                            <div class="testimonail-desc">
+                                                Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.
+                                            </div><!--./testimonail-desc-->
+                                    </div><!--./testimonail-item-->
+                                    <div class="testimonail-item">
+                                        <div class="testimonail-toplayer">
+                                            <img src="images/images/Testimonial/perso2.webp" alt="image" >
+                                            <h2>jon doe</h2>
+                                            <span>web designer</span>
+                                        </div><!--./testimonail-toplayer-->
+                                            <div class="testimonail-desc">
+                                                Molestie at elementum eu facilisis sed odio. Scelerisque in dictum non consectetur a erat. Aliquam id diam maecenas ultricies mi eget mauris.
+                                            </div><!--./testimonail-desc-->
+                                    </div><!--./testimonail-item-->
+                                </div><!--./testimonail-content-->
+                            </div><!--./container-->
+                        </div><!--./overlay-->
+                    </div> <!--./testimonail-->
+
+                    <!--  team section -->
+                    <div class="team pd-y">
+                        <div class="section-header">
+                            <h2 class="section-title">our team</h2>
+                            <span class="line"></span>
+                        </div> <!--./ section-header -->
+                        <div class="container">
+                            <div class="team-content">
+                                <div class="team-item ttp-effect">
+                                    <div class="team-img">
+                                        <img src="images/images/team/team1.webp" alt="image">
+                                        <div class="team-overlay">
+                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                                            <a href="#"><i class="fa fa-twitter"></i></a>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="team-info"> 
+                                        <h3 class="team-info-title">
+                                            john doe
+                                        </h3>
+                                        <span class="team-info-text">
+                                            web designer
+                                        </span>
+                                    </div>
+                                </div> <!--./team-item-->
+                                <div class="team-item ttp-effect mg ">
+                                    <div class="team-img ">
+                                        <img src="images/images/team/team2.webp" alt="image">
+                                        <div class="team-overlay">
+                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                                            <a href="#"><i class="fa fa-twitter"></i></a>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="team-info"> 
+                                        <h3 class="team-info-title">
+                                            john doe
+                                        </h3>
+                                        <span class="team-info-text">
+                                            web designer
+                                        </span>
+                                    </div>
+                                </div> <!--./team-item-->
+                                <div class="team-item ttp-effect">
+                                    <div class="team-img">
+                                        <img src="images/images/team/team3.webp" alt="image">
+                                        <div class="team-overlay">
+                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                                            <a href="#"><i class="fa fa-twitter"></i></a>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="team-info"> 
+                                        <h3 class="team-info-title">
+                                            john doe
+                                        </h3>
+                                        <span class="team-info-text">
+                                            web designer
+                                        </span>
+                                    </div>
+                                </div> <!--./team-item-->
+                                
+                            </div> <!--./team-content-->
+                        </div><!--./container-->
+                    </div><!--./team-->
+
+                    <!-- video 14 -->
+             <!-- الجزء الاخير من تطبيق المشروع 
+            - نهايه السكاشن فى التصميم والتاسك المطلوب منك 
+            - عمل refactor للكود بطريقه بسيطة 
+            - ازاى تفكر فى التصميم  -->
+            <!-- blog section -->
+            <div class="blog pd-y">
+                <div class="section-header">
+                    <h2 class="section-title">Recents News</h2>
+                    <span class="line"></span>
+                </div> <!--./ section-header -->
+                <div class="container">
+                    <div class="blog-contant" >
+                        <div class="blog-item">
+                            <div class="blog-image">
+                                <img src="images/images/blog/blog1.webp" alt="image">
+                            </div><!--./blog-image-->
+                            <div class="blog-icon">
+                                <ul class="blog-list">
+                                    <li class="icon"><i class="fa fa-user"></i>
+                                        <span>john doe</span>
+                                    </li>
+                                   <li class="icon"><i class="fa fa-clock-o"></i>
+                                    <span>18 oct</span>
+                                </li> 
+                                <li class="icon"> <i class="fa fa-comments"></i>
+                                    <span>57</span>
+                                </li>   
+                                </ul><!--./blog-list-->
+                                <div class="blog-header">
+                                    <h3 class="blog-header-content">Molestie at elementum eu facilisis sed odio</h3>
+                                </div><!--./blog-header-->
+                                <div class="blog-desc">
+                                    <p class="blog-desc-contant">Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
+                                </div><!--./blog-desc-->
+                                <a href="#" class="blog-link"> read more</a>
+                            </div><!--./blog-icon-->
+                        </div><!--./blog-item-->
+                        <div class="blog-item mg">
+                            <div class="blog-image">
+                                <img src="images/images/blog/blog2.webp" alt="image">
+                            </div><!--./blog-image-->
+                            <div class="blog-icon">
+                                <ul class="blog-list">
+                                    <li class="icon"><i class="fa fa-user"></i>
+                                        <span>john doe</span>
+                                    </li>
+                                   <li class="icon"><i class="fa fa-clock-o"></i>
+                                    <span>18 oct</span>
+                                </li> 
+                                <li class="icon"> <i class="fa fa-comments"></i>
+                                    <span>57</span>
+                                </li>   
+                                </ul><!--./blog-list-->
+                                <div class="blog-header">
+                                    <h3 class="blog-header-content">Molestie at elementum eu facilisis sed odio</h3>
+                                </div><!--./blog-header-->
+                                <div class="blog-desc">
+                                    <p class="blog-desc-contant">Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
+                                </div><!--./blog-desc-->
+                                <a href="#" class="blog-link"> read more</a>
+                            </div><!--./blog-icon-->
+                        </div><!--./blog-item-->
+                        <div class="blog-item">
+                            <div class="blog-image">
+                                <img src="images/images/blog/blog3.webp" alt="image">
+                            </div><!--./blog-image-->
+                            <div class="blog-icon">
+                                <ul class="blog-list">
+                                    <li class="icon"><i class="fa fa-user "></i>
+                                        <span>john doe</span>
+                                    </li>
+                                   <li class="icon"><i class="fa fa-clock-o"></i>
+                                    <span>18 oct</span>
+                                </li> 
+                                <li class="icon"> <i class="fa fa-comments"></i>
+                                    <span>57</span>
+                                </li>   
+                                </ul><!--./blog-list-->
+                                <div class="blog-header">
+                                    <h3 class="blog-header-content">Molestie at elementum eu facilisis sed odio</h3>
+                                </div><!--./blog-header-->
+                                <div class="blog-desc">
+                                    <p class="blog-desc-contant">Nec feugiat nisl pretium fusce id velit ut tortor pretium. Nisl purus in mollis nunc sed. Nunc non blandit massa enim nec.</p>
+                                </div><!--./blog-desc-->
+                                <a href="#" class="blog-link"> read more</a>
+                            </div><!--./blog-icon-->
+                        </div><!--./blog-item-->
+                    </div><!--./blog-contant-->
+                </div><!--./container-->
+                 
+            </div><!--./blog-->
+            <!-- contact section -->
+            <div class="contact pd-y">
+                <div class="section-header">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <span class="line"></span>
+                </div> <!--./ section-header -->
+                <div class="container">
+                    <div class="contact-content">
+                        <div class="contact-item">
+                            <div class="contact-item-icon ">
+                                <i class=" icon fa fa-phone fa-2x"></i>
+                                <p class="contact-icon-phone">phone</p>
+                                <p class="contact-date">512-421-3940</p>
+
+                            </div><!--./contact-item-icon-->
+                            <div class="contact-item-icon mg">
+                                <i class=" icon fa fa-envelope fa-2x"></i>
+                                <p class="contact-icon-phone">email</p>
+                                <p class="contact-date">email@support.com</p>
+
+                            </div><!--./contact-item-icon-->
+                            <div class="contact-item-icon ">
+                                <i class="icon fa fa-map-marker fa-2x"></i>
+                                <p class="contact-icon-phone">address</p>
+                                <p class="contact-date">1739 Bubby Drive</p>
+                            </div><!--./contact-item-icon-->
+                        </div><!--./contact-item-->
+                        <div class=" contact-form">
+                            <div class="contact-forms">
+                                <form class="contact-form-class">
+                                    <div class="contact-form-input">
+                                       <input class="contact-input-name" type="text" placeholder="Name"> 
+                                         <input class="contact-input-email" type="text" placeholder="Email">
+                        
+                                    </div><!--./form-input-->
+                                    <div class="contact-form-input-next-Supject">
+                                      <input type="text" placeholder="Supject">
+                                    </div><!--./contact-form-input-next-Supject-->
+                                 <div class="contact-textarea">
+                                  <textarea row="20" col="30" placeholder="Message"></textarea>
+                                 </div><!--./contact-textarea-->
+                                 <button class="contact-button" >Send message</button>
+                        
+                                 </form><!--./form-class-->
+                            </div><!--./contact-form-->
+                         
+                        </div><!--./contact-form-->
+                    </div><!--./contact-content-->
+                </div><!--./container-->
+            </div><!--./contact-->
+            <div class="footer">
+                <img src="images/images/logo-alt.webp" alt="image">
+                <ul class="footer-links">
+                    <li> <a  href="#" class="hover-opacity" ><i class="fa fa-facebook"></i></a></li>
+                    <li> <a  href="#" class="hover-opacity" ><i class="fa fa-twitter"></i></a></li>
+                    <li> <a  href="#" class="hover-opacity" ><i class="fa fa-google-plus"></i></a></li>
+                    <li> <a  href="#" class="hover-opacity" ><i class="fa fa-instagram"></i></a></li>
+                    <li> <a  href="#" class="hover-opacity"><i class="fa fa-linkedin"></i></a></li>
+                    <li> <a  href="#" class="hover-opacity" ><i class="fa fa-youtube"></i></a></li>
+                </ul>
+                <p class="copyright">
+                    copyright &copy; 2019 .all right reserved bycolorlip
+                </p>
+
+            </div><!--./footer-->
+            
+                
+
+
+                    
+                  
+                    
+                         
+                         
+
+
+
+
+
+
+
+   
+                      
+    
+     
+                           
+                   
+                 
+                        </body>
+                        </html>

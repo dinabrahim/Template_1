@@ -1,0 +1,957 @@
+
+
+    /* 
+    1-Common  Styles
+    2-General Styles
+    3- Sectiones
+         3.0 header Section 
+        3.1 Home Section 
+        3.2 About Section 
+        3.3 Protfolio Section 
+        3.4 Service Section 
+        3.5 Prices Section 
+        3.6 Team Section 
+        3.7 Blog Section 
+        3.8 Contact Section 
+        3.9 footer Section 
+    
+ */
+
+
+
+
+/*1- common styles */
+/* 
+    -container
+    -overlay
+    -opacity hover
+    -section header
+    -section padding
+    -hover effect 1 (left to right)
+    -hover effect 2 (right to left)
+ */
+ .overlay{
+    position: absolute;
+    width: 100%;
+    height:100%;
+     background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+}
+.hover-opacity{
+    transition: opacity 0.5s /* css3 */
+    /* عاوزه يقعد وقت شويه  */
+    
+}
+
+.hover-opacity:hover{
+    opacity: 0.8;
+}
+.ltr-effect{
+    position: relative;
+}
+.ttp-effect{
+    position: relative;
+}
+
+.ltr-effect::after , .ttp-effect::after{
+    position: absolute;
+    content: "";
+   
+    /* height: 100%; */
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #333;
+  
+   /* يتحرك براحه فى0.5 ثانيهwidth خليلى  */
+   z-index:-1;
+   /* height/width/اما تعملها  */
+   /* او تعمل
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0; */
+    /* الاثنين يادون نفس العمل  */
+
+}
+.ltr-effect::after {
+    width: 0;
+    transition: width 0.5s;
+}
+.ltr-effect:hover::after{
+   width: 100%;
+
+}
+.ttp-effect::after{
+    height: 0;
+    transition: height 0.5s;
+}
+/*  */
+.ttp-effect:hover::after{
+    height: 100%;
+
+}
+
+
+ /* 2-General Css Styles */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* css3 */   
+}
+ul{
+    list-style: none;
+}
+.container{
+    width: 80%;
+   margin: auto;
+}
+
+body{
+    font-family: 'Varela Round', sans-serif;
+}
+:root{
+    --maincolor:#6195FF;
+    --graycolor:#999;
+}
+
+
+.clear{
+    clear: both;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+button{
+    font-family: inherit;
+}
+a{
+    text-decoration: none;
+}
+.pd-y{
+    padding: 120px 0;
+
+}
+.section-header{
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+.section-header .section-title{
+    text-align: center;
+   text-transform: capitalize;
+   font-size: 35px;
+  margin-bottom: 10px;
+
+}
+.section-header .line{
+    display: block;
+    width:60px ;
+    height:5px;
+    margin: 0 auto 70 auto;
+    background-color:#6195FF ;
+
+}
+/* 3- Section styles */
+/*  3.0 header */
+
+.header{
+    /* background: gray; */
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.4);
+}
+.header-content{
+    /* overflow: hidden; to solve float problem */
+}
+.header .logo{
+    width: 40%;
+    float: left;
+}
+.header .logo img{
+    width: 20%;
+    margin-top: 15px;
+  
+}
+.header .nav {
+    width: 60%;
+    float: left;
+    list-style: none;
+    text-align: right;
+}
+.header  .nav > li{
+    display:inline-block;
+    /* width: 75px; */
+    text-align: right;
+}
+.header  .nav > li > a{
+    color: white;
+    font-size: 14px;
+   /* text-decoration: none; */
+   display: block;
+   /* هتنزل تحت بعض  a لو كتبت حاجه تانيه فى block خد بالك عشان انت عامل  */
+   padding: 30px 15px;
+}
+.header  .nav > li > a::after,.header  .nav > li > a.active::after{
+    content: "";
+    display: block;
+    height: 2px;
+    margin-top: 2px;
+    background-color: var(--maincolor);
+    transition: width 0.5s;
+
+}
+.header  .nav > li > a.active::after{
+    width: 100%;
+}
+.header  .nav > li > a::after{
+    width: 0;
+}
+.header  .nav > li > a:hover::after{
+    width: 100%;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown-menu{
+    position: absolute;
+    background-color:#6195FF ;
+    width: 150px;
+    text-align: center;
+    left: -50%;
+    top: 70%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s , visibility 0.5s ;
+    /* فقطopacity ويكون على visibility  ممكن تشيلى */
+}
+
+.dropdown-menu a {
+   color: white;
+   /* text-decoration: none; */
+   display: block;
+   padding: 10px;
+}
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+/* Home Section */
+.home{
+    background-image: url(../images/images/background/background1.webp);
+    height: 100vh;
+    background-size: cover;/* css3  */
+    position: relative; 
+    
+}
+.home-content{
+   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  width: 65%;
+}
+.home .title{
+    color: white;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+.home .home-desc{
+    margin: 20px 0px;
+    color: fff;
+    letter-spacing: 2px;
+    line-height:1.5 ;
+
+}
+.home .btn{
+   min-width: 160px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 0px;
+    cursor: pointer;
+    /* بتخلى شكل الموس يد */
+    font-size: 18px;
+}
+.home .btn-start{
+    margin-right:10px;
+    background-color: white;
+}
+.home .btn-learn{
+    background-color: #6195FF;
+    color: #fff; 
+}
+
+/* About Section */
+.about-content{
+    overflow: hidden;
+}
+.about-item{
+    width: 30%;
+    float: left;
+    text-align: center;
+    border: 1px solid #e9e9e9 ;
+    padding: 50px 20px;
+}
+.about-item:hover .about-item-title{
+color: #fff;
+}
+.about-item.mg{
+   margin: 0 5%;
+}
+.about-item .icon{
+    color:#6195FF ;
+    /* padding-bottom: 10px; */
+    margin-bottom: 10px;
+}
+.about-item-title{
+    /* padding: 20px 0px; */
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    transition: color 0.5s;
+}
+.about-item-desc{
+    padding-bottom: 10px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #999;
+}
+.about-title-link{
+    color:#6195FF ;
+    text-transform: capitalize;
+}
+
+
+/* Protfolio Section */
+.portfolio{
+    background: #f9f9f9;
+}
+.portfolio-content{
+    overflow: hidden;
+}
+.porfolio-item{
+    float: left;
+    width: 32%;
+    margin-bottom: 5px;
+    position: relative;
+    padding: 20px;
+}
+.porfolio-item img{
+    width: 100%;
+}
+.porfolio-item .layer-content{
+    position: absolute;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2;
+}
+.porfolio-item:hover .layer-content{
+    visibility: visible;
+    opacity: 1; 
+
+}
+
+.layer-content .layer-info{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    text-align: center;
+}
+.layer-content .category{
+    color: #6195FF;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+    position: relative;
+    top: 10px;
+    opacity: 0;
+    /* visibility: hidden; */
+    transition: top 0.5s, opacity 0.5s;
+    /*  */
+    transition-delay: 0.2s;
+    /* هذا الكود يجعل الكلام يطلع وراء بعضه */
+}
+ .layer-content-title{
+     color: #fff;
+     font-size: 25px;
+     margin-bottom: 10px;
+      position: relative;
+     top: 10px;
+     opacity: 0;
+     /* visibility: hidden; */
+     transition: top 0.5s, opacity 0.5s;
+     transition-delay: 0.3s;
+}
+.layer-content a{
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background-color:#6195FF ;
+    position: relative;
+     top: 10px;
+     opacity: 0;
+     /* visibility: hidden; */
+     transition: top 0.5s, opacity 0.5s;
+     transition-delay: 0.3s;
+}
+.layer-content a i{
+    line-height: 40px;
+    color: #fff;
+}
+.porfolio-item:hover .layer-content .category,.porfolio-item:hover .layer-content-title,
+.porfolio-item:hover .layer-content a {
+    top: 0px;
+    opacity: 1;
+    /* visibility: visible; */
+}
+
+.porfolio-item.mg{
+    margin: 0 2%;
+}
+
+/* offer Section */
+.offer-content{
+    overflow: hidden;
+    }
+    .offer-item{
+       width: 30%;
+        float: left;
+        margin-bottom: 20px;
+        border: 1px solid #e8e8e8;
+        padding: 30px 15px 30px 70px;
+        position:relative ;
+      
+    }
+    .offer-item.mg{
+        margin: 0 5%;
+    
+    }
+    
+    .offer-item .icon{
+    position: absolute;
+    left: 20px;
+    top:35px;
+    color: #6195FF;
+    
+    }
+    .offer-item-title{
+        text-transform: capitalize;
+        padding-bottom: 20px;
+        /* margin-bottom: 15px; */
+      transition: color 0.5;
+    
+    }
+    .offer-item-desc{
+        text-transform: capitalize;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        color: #868F9B;
+    
+    }
+    .offer-item:hover .offer-item-title{
+        color: #fff;
+
+    }
+
+    
+    /* service section */
+    .service{
+        background-color: #FAFAFA ;
+    }
+  .service-item{
+      width: 50%;
+      float: left;
+  }
+ .service-item .section-header .section-title{
+     text-align: left;
+ }
+ .service-item .section-header .line{
+     margin: 0 0 50px 0 ;
+ }
+ .service-item-desc{
+     padding-right: 20px;
+     color: #999;
+     line-height: 1.5;
+     font-size: 17px;
+     margin-bottom: 20px;
+ }
+ .service-list{
+     list-style: none;
+ }
+ .service-list li{
+    color: #999;
+    margin-bottom: 10px;
+
+ }
+ .service-list li i{
+    border: 1px solid #6195FF;
+    color:#6195FF ;
+    border-radius:50% ;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    margin-right:5px ;
+
+ }
+ .service-item-img img{
+     width: 100%;
+ } 
+ .service-bollest{
+     list-style: none;
+     text-align: center;
+
+ }
+ .service-bollest li{
+     width: 10px;
+     height: 10px;
+     display:inline-block ;
+     background-color: #e8e8e8;
+     border-radius: 50%;
+    margin: 10px 5px;
+
+ }
+ .service-bollest li.active{
+     background-color: #6195FF;
+ }
+ .service-bollest li:hover{
+
+    background-color: #6195FF;
+     /* هيعمل باك جروند كدهli لما اشاور على   */
+ }
+
+/* numbers section */
+.numbers{
+    position: relative;
+   background-image: url(../images/images/background/background2.webp);
+   height: 250px;
+   background-size: cover;
+   background-attachment:fixed ;
+  
+}
+.numbers-items{
+    overflow: hidden;
+   padding-top:80px ;
+}
+.number-item{
+    width: 25%;
+    float: left;
+    text-align: center;
+  
+}
+ .number-item .icon{
+     color: #6195FF ;
+     margin-bottom: 20px;
+
+}
+.number-item-title{
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+   
+    
+}
+.number-item-text{
+    color: #fff;
+    font-size: 15px;
+    text-transform: capitalize;
+
+  
+}
+
+
+
+
+/* Prices Section */
+
+
+.price{
+
+}
+.pricing-plans{
+    overflow: hidden;
+   
+}
+.pricing-item{
+    float: left;
+    width: 30%;
+    padding: 20px 15px;
+    border: 1px solid #e8e8e8;
+    text-align: center;
+  
+  
+}
+.pricing-item.mg{
+    margin: 0 5%;
+}
+.pricing-item-text{
+    color: #868F9B;
+    display: block;
+   margin: 30px 0;
+   text-transform: uppercase;
+}
+.pricing-item-permonth{
+    border: 2px solid #6195FF ;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    padding-top:25px ;
+    margin: auto;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.pricing-item-permonth .doller{
+    font-size: 50px;
+}
+.pricing-item-permonth .month{
+    font-size: 15px;
+}
+.pricing-list{
+    color: #868F9B;
+    list-style: none;
+    line-height: 2.4;
+   margin: 30px 0;
+   
+}
+.pricing-item-purchase{
+    border: 2px solid #6195FF ;
+    color:#6195FF ;
+    background: none;
+    display:block ;
+    margin: auto;
+   font-size: 16px;
+   padding: 10px 35px;
+  
+   text-align: center;
+   margin-bottom: 20px;
+}
+.pricing-item:hover .pricing-item-text{
+    color: #6195FF;
+}
+.pricing-item:hover .pricing-item-permonth{
+    color: #fff;
+}
+
+/* testimonail section */
+.testimonail{
+    position: relative;
+    background-image: url(../images/images/background/background3.webp);
+    background-attachment: fixed;
+    height: 400px;
+}
+
+
+.testimonail-content{
+ overflow: hidden;
+ padding: 120px 0;
+ /*  */
+ width: 80%;
+ margin: auto;
+ /* عشان اقلل الكونتينر بتاعى شويه واخلى الكلام فى النصف */
+
+}
+.testimonail-item{
+    width: 50%;
+    float: left;
+    color: #fff;
+   
+}
+.testimonail-item .testimonail-toplayer{
+    padding: 10px 2px 40px 100px;
+    position: relative;
+}
+.testimonail-item .testimonail-toplayer h3{
+    margin: 5px 0;
+
+}
+.testimonail-item .testimonail-toplayer span{
+   color:#6195FF ;
+
+}
+.testimonail-desc{
+    line-height: 1.5;
+    font-size: 17px;
+
+}
+
+.testimonail-item .testimonail-toplayer img{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 50%;
+}
+
+
+
+
+/* Team Section */
+.team{
+
+}
+.team-content{
+    overflow: hidden;
+}
+.team-item{
+    width: 30%;
+    float: left;
+    background-color: #e8e8e8;
+    padding: 40px 10px;
+    text-align: center;
+}
+.team-item .team-img{
+    width: 90%;
+    margin: auto;
+    position: relative;
+    
+}
+.team-overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+
+}
+.team-overlay a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    /* لو مش اعطيت طول وعرض الايكونات هتتحط فى الاعلى خد بالك */
+    background-color:#7ba7ff ;
+    color: #fff;
+    margin-left: auto;
+   
+  
+}
+.team-overlay a i{
+   line-height: 40px;
+}
+
+
+
+.team-item .team-img img{
+    width: 100%; 
+}
+.team-item .team-info-title{
+    color: #222;
+    text-transform: capitalize;
+    margin: 10px 0;
+    transition: color 0.5s;
+}
+.team-item .team-info-text{
+    color:#868F9B ;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: color 0.5s;
+}
+.team-item:hover .team-overlay{
+    opacity: 1;
+    visibility: visible;
+
+}
+.team-item.ttp-effect{
+    z-index: 1;
+}
+.team-item:hover .team-info-title{
+    color: #fff;
+
+}
+.team-item:hover .team-info-text{
+
+    color:#7ba7ff ;
+}
+.team-item.mg{
+    margin: 0 5%;
+}
+
+/* Blog Section */
+.blog-contant{
+    overflow: hidden;
+   
+    
+}
+.blog{
+    background-color: #FAFAFA;
+}
+.blog-item{
+    float: left;
+    width: 30%;
+    background-color: white;
+}
+.blog-image img{
+   
+    width: 100%;
+    
+   
+}
+.blog-item.mg{
+    margin: 0 5%;
+}
+.blog-list .icon{
+    list-style: none;
+    display: inline-block;
+    color:#7ba7ff  ;
+    margin: 20px 10px;
+    padding: 5px;
+    text-transform: capitalize;
+}
+
+
+.blog-list span{
+    color: #10161A;
+    font-size: 13px;
+
+
+}
+.blog-header-content{
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #10161A;
+    margin: 0px 15px;
+    
+}
+.blog-desc-contant{
+    color: #868F9B;
+    font-size: 20px;
+    font-size: 17px;
+    margin: 15px 15px;
+    line-height: 1.5;
+}
+.blog-item .blog-link{
+    display: block;
+    color: #7ba7ff ;
+    font-size: 17px;
+    text-transform: capitalize;
+    margin: 0px 15px;
+    margin-bottom: 30px;
+}
+
+/* Contact Section */
+.contact-content{
+    overflow: hidden;
+}
+.contact-item-icon{
+    width: 30%;
+    float: left;
+    text-align: center;
+
+    
+}
+.contact-item-icon.mg{
+    margin: 0 5%;
+    text-align: center;
+    
+}
+
+
+.contact-item-icon .icon{
+    color: #7ba7ff;
+}
+.contact-icon-phone{
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 15px 0;
+
+}
+.contact-date{
+    color: #868F9B;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+.contact {
+    text-align: center;
+}
+.contact-form-class .contact-form-input input, .contact-form-input-next-Supject input, .contact-textarea textarea {
+   
+    padding:  10px;
+    text-transform: capitalize;
+    background-color: #F4F4F4;
+    border: 0;
+    margin: auto;
+   margin: 15px;
+    color: #354052;;
+    font-size: 15px;
+   
+
+}
+.contact-form-class .contact-form-input input{
+   
+    width: 350px;
+    height: 40px;
+ 
+}
+.contact-form-input-next-Supject input{
+   width: 730px;
+   height: 40px;
+  
+}
+.contact-textarea textarea{
+    width: 730px;
+    height: 90px;
+  
+
+}
+.contact-button {
+    color: #fff;
+    background-color:#7ba7ff  ;
+    width: 180px;
+    height: 50px;
+    border: 0;
+    border-radius:4% ;
+    font-size: 17px;
+}
+.contact-button:hover{
+    opacity: 0.8;
+}
+/* footer section */
+.footer{
+    background-color:  #1C1D21;
+    text-align: center;
+    padding: 70px 0;
+   
+}
+.footer-links {
+    list-style: none;
+    margin: 20px 0;
+
+}
+
+.footer-links li{
+    display: inline-block;
+}
+.footer-links li a{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background:#7ba7ff  ;
+    color: #fff;
+    border-radius:50% ;
+    margin: 0 5px;
+}
+.footer-links li a i{
+    line-height: 50px;
+    /*  نفس حجم البيرنت بتاعها هتلاقى الايكون اتظبطت فى نصف الصندوق بتاعهاi معناه انك بتدى ال  */
+}
+.footer .copyright{
+    color: #999;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 30px;
+}
+
